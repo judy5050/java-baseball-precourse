@@ -10,7 +10,6 @@ public class Application {
         while(isReRun){
             boolean isCorrect=false;
             String computerNumber= makeComputerNumber();
-            System.out.println(computerNumber);
             while(!isCorrect){
                 //사용자 숫자 입력 메소드
                 String userNumber = inputUserNumber();
