@@ -71,4 +71,22 @@ public class Application {
 
         return isDuplicate;
     }
+
+    //숫자 랜덤으로 뽑기
+    public static String makeComputerNumber(){
+        boolean []check=new boolean[10];
+        int count=0;
+        String computerNumber="";
+        while(count<3){
+            int randomValue = Randoms.pickNumberInRange(0, 9);
+            //같은 번호 뽑힘 x일때는 count++를 하여 뽑은 수를 체크해준다.
+            if(check[randomValue]==false){
+                count++;
+                check[randomValue]=true;
+                computerNumber+= String.valueOf(randomValue);
+            }
+        }
+        return computerNumber;
+    }
+
 }
