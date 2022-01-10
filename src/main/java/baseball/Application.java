@@ -1,7 +1,4 @@
 package baseball;
-
-
-import java.io.IOException;
 import java.util.Arrays;
 import nextstep.utils.Console;
 import nextstep.utils.Randoms;
@@ -37,7 +34,6 @@ public class Application {
             }else{
                 break;
             }
-
         }
         return inputUserNumber;
     }
@@ -66,7 +62,6 @@ public class Application {
 
     //사용자 입력값 중복확인
     public static boolean checkUserInputDuplication(String inputUserNumber){
-
         //중복숫자 확인 메서드
         Integer []checkInput=new Integer[10];
         Arrays.fill(checkInput,0);
@@ -81,7 +76,6 @@ public class Application {
                 isDuplicate=false;
             }
         }
-
         return isDuplicate;
     }
 
@@ -115,9 +109,6 @@ public class Application {
             }
         }
         return printBallAndStrikeNumber(ballCount,strikeCount);
-
-
-
     }
 
     //스트라이크와 볼 개수 출력
