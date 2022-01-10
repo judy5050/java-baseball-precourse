@@ -25,7 +25,6 @@ public class Application {
         //값 입력하기
         String inputUserNumber;
         while(true){
-            boolean isValidation=true;
             System.out.print("숫자를 입력해 주세요 : ");
             inputUserNumber = Console.readLine();
             if(checkUserInputLength(inputUserNumber)==false||checkUserInputDuplication(inputUserNumber)==false||checkInputType(inputUserNumber)==false){
