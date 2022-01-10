@@ -129,4 +129,14 @@ public class Application {
         return isCorrect;
     }
 
+    //게임 재시작 혹은 종료 선택
+    private static boolean chooseGameReRun() {
+        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+        String gameState = Console.readLine();
+        if(gameState.equals("1")){
+            return  true;
+        }else{
+            return false;
+        }
+    }
 }
