@@ -89,4 +89,44 @@ public class Application {
         return computerNumber;
     }
 
+    //볼과 스트라이크수 계산
+    public static boolean  countBallAndStrike(String inputUserNumber,String inputComputerNumber) {
+        int ballCount=0;
+        int strikeCount=0;
+        for(int i=0;i<inputComputerNumber.length();i++){
+            int findPos=inputComputerNumber.indexOf(inputUserNumber.charAt(i));
+            if(findPos==i){
+                strikeCount++;
+            }else if(findPos!=-1){
+                ballCount++;
+            }
+        }
+        return printBallAndStrikeNumber(ballCount,strikeCount);
+
+
+
+    }
+
+    //스트라이크와 볼 개수 출력
+    public static  boolean printBallAndStrikeNumber(int ballCount,int strikeCount){
+
+        boolean isCorrect=false;
+        if(ballCount!=0&&strikeCount!=0){
+            System.out.println(strikeCount+"스트라이크"+' '+ballCount+"볼");
+        }else if(ballCount==0&&strikeCount!=0){
+            if(strikeCount==3){
+                isCorrect=true;
+                System.out.println(strikeCount+"스트라이크");
+                System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 끝");
+            }else{
+                System.out.println(strikeCount+"스트라이크");
+            }
+        }else if(ballCount!=0&&strikeCount==0){
+            System.out.println(+ballCount+"볼");
+        }else{
+            System.out.println("낫싱");
+        }
+        return isCorrect;
+    }
+
 }
