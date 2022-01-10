@@ -9,6 +9,19 @@ import nextstep.utils.Randoms;
 public class Application {
     public static void main(String[] args)  {
         // TODO 숫자 야구 게임 구현
+        boolean isReRun=true;
+        while(isReRun){
+            boolean isCorrect=false;
+            String computerNumber= makeComputerNumber();
+            System.out.println(computerNumber);
+            while(!isCorrect){
+                //사용자 숫자 입력 메소드
+                String userNumber = inputUserNumber();
+                //컴퓨터 3자리 난수생성
+                isCorrect=countBallAndStrike(userNumber,computerNumber);
+            }
+            isReRun = chooseGameReRun();
+        }
     }
 
     //사용자 숫자입력 메소드
