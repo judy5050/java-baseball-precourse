@@ -27,7 +27,10 @@ public class Application {
         while(true){
             System.out.print("숫자를 입력해 주세요 : ");
             inputUserNumber = Console.readLine();
-            if(checkUserInputLength(inputUserNumber)==false||checkUserInputDuplication(inputUserNumber)==false||checkInputType(inputUserNumber)==false){
+            if(checkInputType(inputUserNumber)==false){
+                System.out.println("ERROR 잘못된 입력값 입니다.");
+            }
+            else if(checkUserInputLength(inputUserNumber)==false||checkUserInputDuplication(inputUserNumber)==false){
                 System.out.println("ERROR 숫자를 다시 입력해주세요");
             }else{
                 break;
