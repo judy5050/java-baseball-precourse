@@ -11,7 +11,6 @@ public class Application {
             boolean isCorrect=false;
             String computerNumber= makeComputerNumber();
             while(!isCorrect){
-                //사용자 숫자 입력 메소드
                 String userNumber = inputUserNumber();
                 isCorrect=countBallAndStrike(userNumber,computerNumber);
             }
@@ -21,7 +20,6 @@ public class Application {
 
     //사용자 숫자입력 메소드
     public static String inputUserNumber(){
-        //값 입력하기
         String inputUserNumber;
         while(true){
             System.out.print("숫자를 입력해 주세요 : ");
@@ -40,7 +38,7 @@ public class Application {
         return inputUserNumber;
     }
 
-    //입력받은 값이 숫자인지 확인하는 방법
+    //입력받은 값이 숫자인지 확인
     private static boolean checkInputType(String inputUserNumber) {
         char tmp;
         boolean isDigit=true;
