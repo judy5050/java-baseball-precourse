@@ -60,11 +60,9 @@ public class Application {
 
     //사용자 입력값 중복확인
     public static boolean checkUserInputDuplication(String inputUserNumber){
-        //중복숫자 확인 메서드
         Integer []checkInput=new Integer[10];
         Arrays.fill(checkInput,0);
         boolean isDuplicate=true;
-
         for(int i=0;i<3;i++){
             String substring = inputUserNumber.substring(i,i+1);
             checkInput[Integer.parseInt(substring)]++;
@@ -84,7 +82,7 @@ public class Application {
         String computerNumber="";
         while(count<3){
             int randomValue = Randoms.pickNumberInRange(0, 9);
-            //같은 번호 뽑힘 x일때는 count++를 하여 뽑은 수를 체크해준다.
+            //같은 번호 뽑힘x 일 때는 count++를 하여 뽑은 수를 체크해준다.
             if(check[randomValue]==false){
                 count++;
                 check[randomValue]=true;
@@ -111,7 +109,6 @@ public class Application {
 
     //스트라이크와 볼 개수 출력
     public static  boolean printBallAndStrikeNumber(int ballCount,int strikeCount){
-
         boolean isCorrect=false;
         if(ballCount!=0&&strikeCount!=0){
             System.out.println(strikeCount+"스트라이크"+' '+ballCount+"볼");
