@@ -28,10 +28,12 @@ public class Application {
             System.out.print("숫자를 입력해 주세요 : ");
             inputUserNumber = Console.readLine();
             if(checkInputType(inputUserNumber)==false){
-                System.out.println("ERROR 잘못된 입력값 입니다.");
+                System.out.println("ERROR 잘못된 입력값입니다");
+            }else if(checkUserInputLength(inputUserNumber)==false){
+                System.out.println("ERROR 3자리 숫자를 입력해 주세요");
             }
-            else if(checkUserInputLength(inputUserNumber)==false||checkUserInputDuplication(inputUserNumber)==false){
-                System.out.println("ERROR 숫자를 다시 입력해주세요");
+            else if(checkUserInputDuplication(inputUserNumber)==false){
+                System.out.println("ERROR 서로 다른 3자리 숫자를 입력해 주세요");
             }else{
                 break;
             }
