@@ -13,7 +13,6 @@ public class Application {
             while(!isCorrect){
                 //사용자 숫자 입력 메소드
                 String userNumber = inputUserNumber();
-                //컴퓨터 3자리 난수생성
                 isCorrect=countBallAndStrike(userNumber,computerNumber);
             }
             isReRun = chooseGameReRun();
